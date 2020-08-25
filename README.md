@@ -27,10 +27,53 @@ Now it's time to set it up.
 If you plan on using ethernet, skip this step.
 
 1. Download the Sublime Text Editor: https://www.sublimetext.com/3
-2. On your computer navigate to the newly flashed SD card. There will be a file called ```octopi-wpa-supplicant.txt```. Open this in sublime.
-3. Change the WPA 2 section with your SSID and Wi-Fi password (at least you should be using this vs WEP or no security). 
+2. On your computer navigate to the newly flashed SD card. There will be a file called ```octopi-wpa-supplicant.txt```. Open this in sublime text.
+3. Change the WPA 2 section with your SSID and Wi-Fi password (at least you should be using this vs WEP or no security). This is shown below.
+4. Save ```octopi-wpa-supplicant.txt``` and close sublime text.
+
+__Before__
+```
+## WPA/WPA2 secured
+#network={
+#  ssid="put SSID here"
+#  psk="put password here"
+#}
+```
+__After__
+_This assumes the wi-fi network you are connecting to is called "YourWifi" and the password to connect to it is called "yourwifipassword"_
+```
+## WPA/WPA2 secured
+#network={
+#  ssid="YourWifi"
+#  psk="yourwifipassowrd"
+#}
+```
+Go here for more detailed instructions: https://community.octoprint.org/t/wifi-setup-and-troubleshooting/184
 
 ### Setup OctoPrint
+Now it's time to setup OctoPrint specific to you. This includes setting up better security, your mini printer, etc. First we start with the command line, then we will complete the setup using the OctoPrint web interface.
+
+#### Power up your OctoPrint server
+In order to setup OctoPrint it's time to power it up.
+
+1. Remove the mini sd card from your computer and insert it into your raspberry pi. 
+2. Connect power to your raspberry pi.
+
+#### Command Line Setup
+This will setup some system level settings (Linux):
+
+1. Log into your Pi via SSH (it is located at octopi.local if your computer supports bonjour or the IP address assigned by your router), 
+    - default username is “pi”, default password is “raspberry”. 
+2. Run ```sudo raspi-config```. Once that is open:
+3. Change the password via “Change User Password”
+4. Change the configured timezone via “Localization Options” > “Timezone”.
+
+#### OctoPrint Setup (web interface)
+Finally we are really to setup your mini printer and OctoPrint stuff
+
+## Plugins
+Plugins allow developers to expand the base functionality of OctoPrint. There are at least a couple of plugins that should be considered "must haves" for mini owners. Each plugin can consume addition resources which can result in degraded printing performance if OctoPrint is slow to send the current g-code instructions over the serial connection as a result of your raspberry pi's CPU being too high. 
+
 
 
 ## Common Issues
