@@ -71,10 +71,47 @@ This will setup some system level settings (Linux):
 #### OctoPrint Setup (web interface)
 Finally we are really to setup your mini printer and OctoPrint stuff
 
+##### Print bed & build volume
+
+| Setting Name | Prusa Mini Value |
+| --- | --- |
+| Form Factor | Rectangular |
+| Origin | Lower Left |
+| Heated Bed | true |
+| Heated Chamber | false |
+| Width (X) | 180mm |
+| Depth (Y) | 180mm |
+| Height (Z) | 180mm |
+| Custom Bounding Box | true |
+| X Coordinates | 0 / 180 |
+| Y Coordinates | -4 / 180 |
+| Z Coordinates | 0 / 180|
+
+##### Axes
+
+| Setting Name | Prusa Mini Value |
+| --- | --- |
+| X | 10800 mm/min |
+| Y | 10800 mm/min |
+| Z | 720 mm/min |
+| E | 4800 mm/min |
+
+##### Hot end & extruder
+
+| Setting Name | Prusa Mini Value |
+| --- | --- |
+| Nozzle Diameter | 0.4 mm |
+| Number of Extruders | 1 |
+
 ## Plugins
 Plugins allow developers to expand the base functionality of OctoPrint. There are at least a couple of plugins that should be considered "must haves" for mini owners. Each plugin can consume addition resources which can result in degraded printing performance if OctoPrint is slow to send the current g-code instructions over the serial connection as a result of your raspberry pi's CPU being too high. 
 
+### Must Have Plugins
+Here are the plugins you should defenitley install:
 
+| Plugin Name | Description |
+| --- | --- |
+| baz | bim |
 
 ## Common Issues
 
@@ -83,3 +120,6 @@ Plugins allow developers to expand the base functionality of OctoPrint. There ar
   2. b
   
     3. c
+    
+## Sources
+
