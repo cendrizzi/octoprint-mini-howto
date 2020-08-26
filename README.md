@@ -1,6 +1,26 @@
+# Table Of Contents
+- [OctoPrint Mini Guide](#octoprint-mini-guide)
+  * [What You Need](#what-you-need)
+  * [Setup](#setup)
+    + [Download and Flash Octoprint](#download-and-flash-octoprint)
+    + [Setup Wi-Fi](#setup-wi-fi)
+    + [Setup OctoPrint](#setup-octoprint)
+      - [Power up your OctoPrint server](#power-up-your-octoprint-server)
+      - [Command Line Setup](#command-line-setup)
+      - [OctoPrint Setup (web interface)](#octoprint-setup--web-interface-)
+        * [Print bed & build volume](#print-bed---build-volume)
+        * [Axes](#axes)
+        * [Hot end & extruder](#hot-end---extruder)
+    + [Connect PrusaSlicer to OctoPrint](#connect-prusaslicer-to-octoprint)
+  * [Plugins](#plugins)
+    + [Must Have Plugins](#must-have-plugins)
+  * [Common Issues](#common-issues)
+  * [Sources](#sources)
+
 # OctoPrint Mini Guide
 A complete guide for setting up Octoprint for the Prusa Mini.
 
+<a name="whatyouneed"/>
 ## What You Need
 This guide will be more useful if you have all the equipment required. Here is a list:
 
@@ -103,17 +123,7 @@ Finally we are really to setup your mini printer and OctoPrint stuff
 | Nozzle Diameter | 0.4 mm |
 | Number of Extruders | 1 |
 
-## Plugins
-Plugins allow developers to expand the base functionality of OctoPrint. There are at least a couple of plugins that should be considered "must haves" for mini owners. Each plugin can consume addition resources which can result in degraded printing performance if OctoPrint is slow to send the current g-code instructions over the serial connection as a result of your raspberry pi's CPU being too high. 
-
-### Must Have Plugins
-Here are the plugins you should defenitley install:
-
-| Plugin Name | Description |
-| --- | --- |
-| [PrusaSlicer Thumbnails](https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails) | This plugin will extract the embedded thumbnails from PrusaSlicer gcode files where the printer's profile ini file has the thumbnail option configured. This is default behavior for the Prusa Mini printer profile. |
-
-## Connect PrusaSlicer to OctoPrint
+### Connect PrusaSlicer to OctoPrint
 * On OctoPrint, go to Settings (wrench icon) > Features > API and copy the API Key
 * In PrusaSlicer, go to the “Printer Settings” tab and switch the “Advanced” or “Expert” configuration levels.
     * Under “General” modify the “Print Host upload” with the following settings:
@@ -121,13 +131,25 @@ Here are the plugins you should defenitley install:
         * API Key/Password: The API key you copied above
         * Save as a new profile and use this whenever you want to be able to directly upload to the printer.
 
+## Plugins
+Plugins allow developers to expand the base functionality of OctoPrint. There are at least a couple of plugins that should be considered essential for mini owners. Each plugin can consume addition resources which can result in degraded printing performance if OctoPrint is slow to send the current g-code instructions over the serial connection as a result of your raspberry pi's CPU being too high. 
+
+### Essential Plugins
+Here are the plugins you should defenitley install:
+
+| Plugin Name | Description |
+| --- | --- |
+| [PrusaSlicer Thumbnails](https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails) | This plugin will extract the embedded thumbnails from PrusaSlicer gcode files where the printer's profile ini file has the thumbnail option configured. This is default behavior for the Prusa Mini printer profile. |
+
 ## Common Issues
+This attempts to answer common issues that mini owners have experienced.
 
-1. a
+### I connect to my mini using USB (serial connection)
+This seems to be a common issue and is probably related to the Mini's slightly recessed usb port. The theory is that a lot of cables do not work well because cannot make contact with the recessed port. Some users have reported trying four USB cables before they found one that was able to connect properly.
 
-  2. b
-  
-    3. c
+### Performance issues, bad 3d prints, somethis is wrong
+Restart your raspberry pi in safe mode. This will start it without all the plugsin. Then try the same print job, etc, and see if the problems persist. Almost all problems are caused by plugins. 
     
 ## Sources
 * [Julia's Docs](https://docs.juliaebert.com/3d-printing/octoprint)
+* [Cable Issues - Prusa Forums](https://forum.prusaprinters.org/forum/user-mods-octoprint-enclosures-nozzles/prusa-mini-and-octoprint/#post-225129)
