@@ -22,7 +22,6 @@
 # OctoPrint Mini Guide
 A complete guide for setting up Octoprint for the Prusa Mini.
 
-<a name="whatyouneed"/>
 ## What You Need
 This guide will be more useful if you have all the equipment required. Here is a list:
 
