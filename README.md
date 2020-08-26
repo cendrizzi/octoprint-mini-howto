@@ -16,7 +16,7 @@
     + [Essential Plugins](#essential-plugins)
   * [Common Issues](#common-issues)
     + [I connect to my mini using USB (serial connection)](#i-connect-to-my-mini-using-usb--serial-connection-)
-    + [Performance issues, bad 3d prints, somethis is wrong](#performance-issues--bad-3d-prints--somethis-is-wrong)
+    + [Performance issues, bad 3d prints, something is wrong](#performance-issues--bad-3d-prints--somethis-is-wrong)
   * [Sources](#sources)
 
 # OctoPrint Mini Guide
@@ -150,7 +150,7 @@ This attempts to answer common issues that mini owners have experienced.
 ### I connect to my mini using USB (serial connection)
 This seems to be a common issue and is probably related to the Mini's slightly recessed usb port. The theory is that a lot of cables do not work well because cannot make contact with the recessed port. Some users have reported trying four USB cables before they found one that was able to connect properly.
 
-### Performance issues, bad 3d prints, somethis is wrong
+### Performance issues, bad 3d prints, something is wrong
 Restart your raspberry pi in safe mode. This will start it without all the plugsin. Then try the same print job, etc, and see if the problems persist. Almost all problems are caused by plugins. 
     
 ## Sources
