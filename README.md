@@ -111,7 +111,7 @@ Here are the plugins you should defenitley install:
 
 | Plugin Name | Description |
 | --- | --- |
-| baz | bim |
+| [PrusaSlicer Thumbnails](https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails) | This plugin will extract the embedded thumbnails from PrusaSlicer gcode files where the printer's profile ini file has the thumbnail option configured. This is default behavior for the Prusa Mini printer profile. |
 
 ## Common Issues
 
