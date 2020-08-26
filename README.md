@@ -113,6 +113,14 @@ Here are the plugins you should defenitley install:
 | --- | --- |
 | baz | bim |
 
+## Connect PrusaSlicer to OctoPrint
+* On OctoPrint, go to Settings (wrench icon) > Features > API and copy the API Key
+* In PrusaSlicer, go to the “Printer Settings” tab and switch the “Advanced” or “Expert” configuration levels.
+    * Under “General” modify the “Print Host upload” with the following settings:
+        * Hostname, IP or URL: octopi.local (or whatever you modified it to be)
+        * API Key/Password: The API key you copied above
+        * Save as a new profile and use this whenever you want to be able to directly upload to the printer.
+
 ## Common Issues
 
 1. a
@@ -122,4 +130,4 @@ Here are the plugins you should defenitley install:
     3. c
     
 ## Sources
-
+* [Julia's Docs](https://docs.juliaebert.com/3d-printing/octoprint)
