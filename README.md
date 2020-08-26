@@ -13,8 +13,10 @@
         * [Hot end & extruder](#hot-end---extruder)
     + [Connect PrusaSlicer to OctoPrint](#connect-prusaslicer-to-octoprint)
   * [Plugins](#plugins)
-    + [Must Have Plugins](#must-have-plugins)
+    + [Essential Plugins](#essential-plugins)
   * [Common Issues](#common-issues)
+    + [I connect to my mini using USB (serial connection)](#i-connect-to-my-mini-using-usb--serial-connection-)
+    + [Performance issues, bad 3d prints, somethis is wrong](#performance-issues--bad-3d-prints--somethis-is-wrong)
   * [Sources](#sources)
 
 # OctoPrint Mini Guide
@@ -89,7 +91,7 @@ This will setup some system level settings (Linux):
 4. Change the configured timezone via “Localization Options” > “Timezone”.
 
 #### OctoPrint Setup (web interface)
-Finally we are really to setup your mini printer and OctoPrint stuff
+Finally we are ready to setup your Mini printer with OctoPrint
 
 ##### Print bed & build volume
 
@@ -140,6 +142,7 @@ Here are the plugins you should defenitley install:
 | Plugin Name | Description |
 | --- | --- |
 | [PrusaSlicer Thumbnails](https://github.com/jneilliii/OctoPrint-PrusaSlicerThumbnails) | This plugin will extract the embedded thumbnails from PrusaSlicer gcode files where the printer's profile ini file has the thumbnail option configured. This is default behavior for the Prusa Mini printer profile. |
+| [OctoPrint-Prusa-Mini-ETA](https://github.com/vookimedlo/OctoPrint-Prusa-Mini-ETA) | This plugin will provide ETA estimates, which are broken with the base installation |
 
 ## Common Issues
 This attempts to answer common issues that mini owners have experienced.
