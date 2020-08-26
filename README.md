@@ -150,7 +150,7 @@ This attempts to answer common issues that mini owners have experienced.
 This seems to be a common issue and is probably related to the Mini's slightly recessed usb port. The theory is that a lot of cables do not work well because cannot make contact with the recessed port. Some users have reported trying four USB cables before they found one that was able to connect properly.
 
 ### Performance issues, bad 3d prints, something is wrong
-Restart your raspberry pi in safe mode. This will start it without all the plugsin. Then try the same print job, etc, and see if the problems persist. Almost all problems are caused by plugins. 
+Restart your raspberry pi in safe mode. This will start it without all the plugins. Then try the same print job, etc, and see if the problems persist. Almost all problems are caused by plugins. 
     
 ## Sources
 * [Julia's Docs](https://docs.juliaebert.com/3d-printing/octoprint)
