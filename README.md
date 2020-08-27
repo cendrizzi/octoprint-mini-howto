@@ -1,38 +1,37 @@
-# Table Of Contents
-- [OctoPrint Mini Guide](#octoprint-mini-guide)
-  * [What You Need](#what-you-need)
-  * [Setup](#setup)
+- [OctoPi and OctoPrint Mini Guide](#octopi-and-octoprint-mini-guide)
+  * [What You Need For OctoPi](#what-you-need-for-octopi)
+  * [Setup OctoPi](#setup-octopi)
     + [Download and Flash Octoprint](#download-and-flash-octoprint)
     + [Setup Wi-Fi](#setup-wi-fi)
-    + [Setup OctoPrint](#setup-octoprint)
       - [Power up your OctoPrint server](#power-up-your-octoprint-server)
       - [Command Line Setup](#command-line-setup)
-      - [OctoPrint Setup (web interface)](#octoprint-setup--web-interface-)
-        * [Print bed & build volume](#print-bed---build-volume)
-        * [Axes](#axes)
-        * [Hot end & extruder](#hot-end---extruder)
+  * [Setup OctoPrint](#setup-octoprint)
+    + [OctoPrint Setup (web interface)](#octoprint-setup--web-interface-)
+      - [Print bed & build volume](#print-bed---build-volume)
+      - [Axes](#axes)
+      - [Hot end & extruder](#hot-end---extruder)
     + [Connect PrusaSlicer to OctoPrint](#connect-prusaslicer-to-octoprint)
-  * [Plugins](#plugins)
+  * [OctoPrint Plugins](#octoprint-plugins)
     + [Essential Plugins](#essential-plugins)
   * [Common Issues](#common-issues)
     + [I connect to my mini using USB](#i-connect-to-my-mini-using-usb)
     + [Performance issues, bad 3d prints, something is wrong](#performance-issues--bad-3d-prints--something-is-wrong)
   * [Sources](#sources)
 
-# OctoPrint Mini Guide
-A complete guide for setting up Octoprint for the Prusa Mini.
+# OctoPi and OctoPrint Mini Guide
+A complete guide for setting up OctoPi and Octoprint for the Prusa Mini. While this guide focuses on OctoPi -- which packages OctoPrint, mjpg-streamer, and more for the raspberry pi -- if you want to install OctoPrint on another platform feel free to skip to the OctoPrint setup instructions.  
 
-## What You Need
+## What You Need For OctoPi
 This guide will be more useful if you have all the equipment required. Here is a list:
 
 - [ ] Prusa Mini 3D Printer
-- [ ] Raspberry Pi (Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4GB, don't bother with zero models) w/ a power cord. The faster the model the better.
+- [ ] Raspberry Pi (Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4GB, don't bother with zero models) w/ a power cord. You should really only consider the Pi3B+ or 4B Models.
 - [ ] SD card (the bigger then better, especially if you have a camera)
 - [ ] A USB or raspberry pi compatible camera (optional but highly recommended)
 - [ ] A USB A to USB micro cord
 
-## Setup
-Now it's time to set it up.
+## Setup OctoPi
+These are instructions specific to setting up OctoPi
 
 ### Download and Flash Octoprint
 
@@ -71,9 +70,6 @@ _This assumes the wi-fi network you are connecting to is called "YourWifi" and t
 ```
 Go here for more detailed instructions: https://community.octoprint.org/t/wifi-setup-and-troubleshooting/184
 
-### Setup OctoPrint
-Now it's time to setup OctoPrint specific to you. This includes setting up better security, your mini printer, etc. First we start with the command line, then we will complete the setup using the OctoPrint web interface.
-
 #### Power up your OctoPrint server
 In order to setup OctoPrint it's time to power it up.
 
@@ -89,10 +85,13 @@ This will setup some system level settings (Linux):
 3. Change the password via “Change User Password”
 4. Change the configured timezone via “Localization Options” > “Timezone”.
 
-#### OctoPrint Setup (web interface)
+## Setup OctoPrint
+Now it's time to setup OctoPrint specific to you. This includes setting up better security, your mini printer, etc. First we start with the command line, then we will complete the setup using the OctoPrint web interface.
+
+### OctoPrint Setup (web interface)
 Finally we are ready to setup your Mini printer with OctoPrint
 
-##### Print bed & build volume
+#### Print bed & build volume
 
 | Setting Name | Prusa Mini Value |
 | --- | --- |
@@ -108,7 +107,7 @@ Finally we are ready to setup your Mini printer with OctoPrint
 | Y Coordinates | -4 / 180 |
 | Z Coordinates | 0 / 180|
 
-##### Axes
+#### Axes
 
 | Setting Name | Prusa Mini Value |
 | --- | --- |
@@ -117,7 +116,7 @@ Finally we are ready to setup your Mini printer with OctoPrint
 | Z | 720 mm/min |
 | E | 4800 mm/min |
 
-##### Hot end & extruder
+#### Hot end & extruder
 
 | Setting Name | Prusa Mini Value |
 | --- | --- |
@@ -132,7 +131,7 @@ Finally we are ready to setup your Mini printer with OctoPrint
         * API Key/Password: The API key you copied above
         * Save as a new profile and use this whenever you want to be able to directly upload to the printer.
 
-## Plugins
+## OctoPrint Plugins
 Plugins allow developers to expand the base functionality of OctoPrint. There are at least a couple of plugins that should be considered essential for mini owners. Each plugin can consume addition resources which can result in degraded printing performance if OctoPrint is slow to send the current g-code instructions over the serial connection as a result of your raspberry pi's CPU being too high. 
 
 ### Essential Plugins
@@ -150,8 +149,9 @@ This attempts to answer common issues that mini owners have experienced.
 This seems to be a common issue and is probably related to the Mini's slightly recessed usb port. The theory is that a lot of cables do not work well because cannot make contact with the recessed port. Some users have reported trying four USB cables before they found one that was able to connect properly.
 
 ### Performance issues, bad 3d prints, something is wrong
-Restart your raspberry pi in safe mode. This will start it without all the plugins. Then try the same print job, etc, and see if the problems persist. Almost all problems are caused by plugins. 
+Restart your OctoPrint instance in safe mode. This will start it without all the plugins. Then try the same print job, etc, and see if the problems persist. Almost all problems are caused by plugins. 
     
 ## Sources
 * [Julia's Docs](https://docs.juliaebert.com/3d-printing/octoprint)
 * [Cable Issues - Prusa Forums](https://forum.prusaprinters.org/forum/user-mods-octoprint-enclosures-nozzles/prusa-mini-and-octoprint/#post-225129)
+* [What is the difference between OctoPrint and OctoPi? Are they the same thing?](https://community.octoprint.org/t/what-is-the-difference-between-octoprint-and-octopi-are-they-the-same-thing/185)
