@@ -19,7 +19,7 @@
   * [Sources](#sources)
 
 # OctoPi and OctoPrint Mini Guide
-A complete guide for setting up OctoPi and Octoprint for the Prusa Mini. While this guide focuses on OctoPi -- which packages OctoPrint, mjpg-streamer, and more for the raspberry pi -- if you want to install OctoPrint on another platform feel free to skip to the OctoPrint setup instructions.  
+A complete guide for setting up OctoPi and Octoprint for the Prusa Mini. While this guide is biased towards OctoPi -- which packages OctoPrint, mjpg-streamer, and more for the raspberry pi -- if you want to use OctoPrint on another platform feel free to skip to the OctoPrint setup instructions after installation.  
 
 ## What You Need For OctoPi
 This guide will be more useful if you have all the equipment required. Here is a list:
