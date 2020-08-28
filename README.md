@@ -1,9 +1,9 @@
 - [OctoPi and OctoPrint Mini Guide](#octopi-and-octoprint-mini-guide)
   * [What You Need For OctoPi](#what-you-need-for-octopi)
   * [Setup OctoPi](#setup-octopi)
-    + [Download and Flash Octoprint](#download-and-flash-octoprint)
+    + [Download and Flash OctoPi](#download-and-flash-octoprint)
     + [Setup Wi-Fi](#setup-wi-fi)
-      - [Power up your OctoPrint server](#power-up-your-octoprint-server)
+      - [Power up your OctoPi server](#power-up-your-octoprint-server)
       - [Command Line Setup](#command-line-setup)
   * [Setup OctoPrint](#setup-octoprint)
     + [OctoPrint Setup (web interface)](#octoprint-setup--web-interface-)
@@ -33,7 +33,7 @@ This guide will be more useful if you have all the equipment required. Here is a
 ## Setup OctoPi
 These are instructions specific to setting up OctoPi
 
-### Download and Flash Octoprint
+### Download and Flash OctoPi
 
 1. Download the Etcher applicatoin to flas the SD card: https://www.balena.io/etcher/
 2. Go to https://octoprint.org/download/ and download the latest OctoPrint image.
@@ -70,7 +70,7 @@ _This assumes the wi-fi network you are connecting to is called "YourWifi" and t
 ```
 Go here for more detailed instructions: https://community.octoprint.org/t/wifi-setup-and-troubleshooting/184
 
-#### Power up your OctoPrint server
+#### Power up your OctoPi server
 In order to setup OctoPrint it's time to power it up.
 
 1. Remove the mini sd card from your computer and insert it into your raspberry pi. 
