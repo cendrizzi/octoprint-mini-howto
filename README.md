@@ -86,7 +86,7 @@ This will setup some system level settings (Linux):
 4. Change the configured timezone via “Localization Options” > “Timezone”.
 
 ## Setup OctoPrint
-Now it's time to setup OctoPrint specific to you. This includes setting up better security, your mini printer, etc. First we start with the command line, then we will complete the setup using the OctoPrint web interface.
+Now it's time to setup OctoPrint. This includes setting up better security, your mini printer, etc using the OctoPrint web interface.
 
 ### OctoPrint Setup (web interface)
 Finally we are ready to setup your Mini printer with OctoPrint
