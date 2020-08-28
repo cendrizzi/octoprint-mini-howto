@@ -3,8 +3,8 @@
   * [Setup OctoPi](#setup-octopi)
     + [Download and Flash OctoPi](#download-and-flash-octoprint)
     + [Setup Wi-Fi](#setup-wi-fi)
-      - [Power up your OctoPi server](#power-up-your-octoprint-server)
-      - [Command Line Setup](#command-line-setup)
+    + [Power up your OctoPi server](#power-up-your-octoprint-server)
+    + [Command Line Setup](#command-line-setup)
   * [Setup OctoPrint](#setup-octoprint)
     + [OctoPrint Setup (web interface)](#octoprint-setup--web-interface-)
       - [Print bed & build volume](#print-bed---build-volume)
@@ -70,13 +70,13 @@ _This assumes the wi-fi network you are connecting to is called "YourWifi" and t
 ```
 Go here for more detailed instructions: https://community.octoprint.org/t/wifi-setup-and-troubleshooting/184
 
-#### Power up your OctoPi server
+### Power up your OctoPi server
 In order to setup OctoPrint it's time to power it up.
 
 1. Remove the mini sd card from your computer and insert it into your raspberry pi. 
 2. Connect power to your raspberry pi.
 
-#### Command Line Setup
+### Command Line Setup
 This will setup some system level settings (Linux):
 
 1. Log into your Pi via SSH (it is located at octopi.local if your computer supports bonjour or the IP address assigned by your router), 
