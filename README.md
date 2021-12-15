@@ -63,10 +63,10 @@ __After__
 _This assumes the wi-fi network you are connecting to is called "YourWifi" and the password to connect to it is called "yourwifipassword"_
 ```
 ## WPA/WPA2 secured
-#network={
-#  ssid="YourWifi"
-#  psk="yourwifipassowrd"
-#}
+network={
+  ssid="YourWifi"
+  psk="yourwifipassowrd"
+}
 ```
 Go here for more detailed instructions: https://community.octoprint.org/t/wifi-setup-and-troubleshooting/184
 
